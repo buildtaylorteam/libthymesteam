@@ -1,3 +1,3 @@
-module cleanup_agent_bd64cd
+module cleanup_agent_1344bd
 
 go 1.23

